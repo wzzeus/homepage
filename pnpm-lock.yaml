@@ -5,6 +5,9 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
+  '@iconify/icons-simple-icons':
+    specifier: ^1.2.74
+    version: 1.2.74
   '@worstone/vue-aplayer':
     specifier: ^1.0.6
     version: 1.0.6
@@ -37,6 +40,9 @@ devDependencies:
   '@icon-park/vue-next':
     specifier: ^1.4.2
     version: 1.4.2(vue@3.4.3)
+  '@iconify/vue':
+    specifier: ^4.1.1
+    version: 4.1.1(vue@3.4.3)
   '@vicons/fa':
     specifier: ^0.12.0
     version: 0.12.0
@@ -1565,6 +1571,24 @@ packages:
     peerDependencies:
       vue: 3.x
     dependencies:
+      vue: 3.4.3
+    dev: true
+
+  /@iconify/icons-simple-icons@1.2.74:
+    resolution: {integrity: sha512-bsmbvwO8hauz49z740CYg70IDevOgshUoq4q1IKt6NnElnn+N2F6AseO3Uti82yUU4OHyQqkWjjUwoPTazlNnA==}
+    dependencies:
+      '@iconify/types': 2.0.0
+    dev: false
+
+  /@iconify/types@2.0.0:
+    resolution: {integrity: sha512-+wluvCrRhXrhyOmRDJ3q8mux9JkKy5SJ/v8ol2tu4FVjyYvtEzkc/3pK15ET6RKg4b4w4BmTk1+gsCUhf21Ykg==}
+
+  /@iconify/vue@4.1.1(vue@3.4.3):
+    resolution: {integrity: sha512-RL85Bm/DAe8y6rT6pux7D2FJSiUEM/TPfyK7GrbAOfTSwrhvwJW+S5yijdGcmtXouA8MtuH9C7l4hiSE4mLMjg==}
+    peerDependencies:
+      vue: '>=3'
+    dependencies:
+      '@iconify/types': 2.0.0
       vue: 3.4.3
     dev: true
 
@@ -4368,6 +4392,7 @@ packages:
 
   /workbox-google-analytics@6.6.0:
     resolution: {integrity: sha512-p4DJa6OldXWd6M9zRl0H6vB9lkrmqYFkRQ2xEiNdBFp9U0LhsGO7hsBscVEyH9H2/3eZZt8c97NB2FD9U2NJ+Q==}
+    deprecated: It is not compatible with newer versions of GA starting with v4, as long as you are using GAv3 it should be ok, but the package is not longer being maintained
     dependencies:
       workbox-background-sync: 6.6.0
       workbox-core: 6.6.0
