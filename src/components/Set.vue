@@ -1,17 +1,7 @@
 <template>
   <div class="setting">
     <el-collapse class="collapse" v-model="activeName" accordion>
-      <el-collapse-item title="个性壁纸" name="1">
-        <div class="bg-set">
-          <el-radio-group v-model="coverType" text-color="#ffffff" @change="radioChange">
-            <el-radio label="0" size="large" border>默认壁纸</el-radio>
-            <el-radio label="1" size="large" border>每日一图</el-radio>
-            <el-radio label="2" size="large" border>随机风景</el-radio>
-            <el-radio label="3" size="large" border>随机动漫</el-radio>
-          </el-radio-group>
-        </div>
-      </el-collapse-item>
-      <el-collapse-item title="个性化调整" name="2">
+      <el-collapse-item title="个性化调整" name="1">
         <div class="item">
           <span class="text">建站日期显示</span>
           <el-switch
@@ -21,7 +11,7 @@
             :inactive-icon="CloseSmall"
           />
         </div>
-        <div class="item">
+        <!-- <div class="item">
           <span class="text">音乐点击是否打开面板</span>
           <el-switch
             v-model="musicClick"
@@ -38,7 +28,7 @@
             :active-icon="CheckSmall"
             :inactive-icon="CloseSmall"
           />
-        </div>
+        </div> -->
         <div class="item">
           <span class="text">底栏背景模糊</span>
           <el-switch
@@ -49,7 +39,7 @@
           />
         </div>
       </el-collapse-item>
-      <el-collapse-item title="播放器配置" name="3">
+      <!-- <el-collapse-item title="播放器配置" name="2">
         <div class="item">
           <span class="text">自动播放</span>
           <el-switch
@@ -78,7 +68,7 @@
             <el-radio label="none" border>不循环</el-radio>
           </el-radio-group>
         </div>
-      </el-collapse-item>
+      </el-collapse-item> -->
       <el-collapse-item title="其他设置" name="4">
         <div>设置内容待增加</div>
       </el-collapse-item>
