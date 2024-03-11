@@ -83,7 +83,7 @@ import { storeToRefs } from "pinia";
 
 const store = mainStore();
 const {
-  coverType,
+  // coverType,
   siteStartShow,
   musicClick,
   playerLrcShow,

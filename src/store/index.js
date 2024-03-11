@@ -79,7 +79,7 @@ export const mainStore = defineStore("main", {
     key: "data",
     storage: window.localStorage,
     paths: [
-      "coverType",
+      // "coverType",
       "musicVolume",
       "siteStartShow",
       "musicClick",

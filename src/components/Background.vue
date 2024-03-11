@@ -28,7 +28,7 @@ import { mainStore } from "@/store";
 import { Error } from "@icon-park/vue-next";
 
 const store = mainStore();
-const bgUrl = ref(null);
+const bgUrl = ref('https://api.miizeus.com/random.php');
 const imgTimeout = ref(null);
 const emit = defineEmits(["loadComplete"]);
 
@@ -37,8 +37,9 @@ const emit = defineEmits(["loadComplete"]);
 const bgRandom = Math.floor(Math.random() * 10 + 1);
 
 // 更换壁纸链接
-const changeBg = (type) => {
-    bgUrl.value = `https://api.miizeus.com/random.php`;
+const changeBg = () => {
+    const timestamp = new Date().getTime(); // 获取当前时间戳
+    bgUrl.value = `https://api.miizeus.com/random.php?timestamp=${timestamp}`;
 };
 
 // 图片加载完成
@@ -73,7 +74,8 @@ const imgLoadError = () => {
 
 onMounted(() => {
   // 加载壁纸
-  changeBg(store.coverType);
+  // changeBg(store.coverType);
+  changeBg();
 });
 
 onBeforeUnmount(() => {
